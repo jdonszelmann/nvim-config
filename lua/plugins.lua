@@ -38,8 +38,13 @@ return require('packer').startup(function(use)
     use 'nvim-treesitter/playground'
     use 'neovim/nvim-lspconfig'
     use {
-        "j-hui/fidget.nvim",
-        tag = "legacy",
+        'j-hui/fidget.nvim',
+        tag = 'legacy',
+        config = function()
+            require("fidget").setup {
+                -- options
+            }
+        end,
     }
     use {
         'nvim-telescope/telescope.nvim',
